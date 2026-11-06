@@ -8,8 +8,8 @@
 финальном test на базовой графике она набирает больше фрагов, чем учитель (15.6 против 11.9, 131 %); на незнакомой
 графике — 41 % учителя (лучшая модель — 52 %).
 
-Это вторая часть курсовой. Первая часть, агент для `defend_the_center`, лежит в ветке
-[`doom/defend_the_center`](https://github.com/vladislavsaltanov/DoomCNN/tree/doom/defend_the_center) и кратко описана в конце.
+Это вторая часть курсовой. Первая часть — агент для `defend_the_center` — находится в отдельном репозитории
+[`DoomCNN-Defend_The_Center`](https://github.com/vladislavsaltanov/DoomCNN-Defend_The_Center).
 
 ![PPO: кривые обучения](reports/dm/e6_ppo/e6_ppo_kl.png)
 
@@ -134,8 +134,7 @@ PPO от DAgger-ученика: `.venv\Scripts\python scripts\dm\dm_ppo.py --ini
 
 ## Первая часть: defend_the_center
 
-Ветка [`doom/defend_the_center`](https://github.com/vladislavsaltanov/DoomCNN/tree/doom/defend_the_center), журнал [`research_log.md`](research_log.md).
-Код первой части лежит и здесь (`src/doomagent/`, `scripts/`, `tests/`) без изменений.
+Первая часть курсовой вынесена в отдельный репозиторий [`DoomCNN-Defend_The_Center`](https://github.com/vladislavsaltanov/DoomCNN-Defend_The_Center). Там находятся исходный код, отчёты и журнал исследования [`research_log.md`](https://github.com/vladislavsaltanov/DoomCNN-Defend_The_Center/blob/main/research_log.md).
 
 Свёрточная сеть играет `defend_the_center` по 4 кадрам 160×120. Конвейер тот же: учитель → имитация → варианты
 графики → DAgger → PPO со штрафом за кручение. На test итоговая модель наравне с учителем и на базовой графике
